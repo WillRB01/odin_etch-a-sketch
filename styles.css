@@ -1,5 +1,6 @@
 * {
     margin: 0px;
+    border: 0px;
     box-sizing: border-box;
 }
 
@@ -31,4 +32,16 @@
  .grid-box {
     flex: 1;
     outline: 1px solid black;
+}
+
+.buttons-wrapper {
+    display: flex;
+    gap: 2rem;
+}
+
+button {
+    padding: 8px 22px;
+    background-color: #000000;
+    color: white;
+    border-radius: 3px;
 }
