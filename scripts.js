@@ -8,6 +8,9 @@ function createGrid(numOfBoxes) {
         for (let i = 0; i < numOfBoxes; i++) {
             const gridBox = document.createElement('div');
             gridBox.classList.add('grid-box');
+            gridBox.addEventListener('mouseover', () => {
+                gridBox.style.backgroundColor = boxColorChanger();
+            });
             gridRow.appendChild(gridBox);
         };
     };
@@ -31,3 +34,17 @@ setGridBtn.addEventListener('click', () => {
    container.innerHTML = '';
    getPlayerInput();
 });
+
+function boxColorChanger() {
+    let rbgValue = [];
+    let newColorValue;
+
+    for (let i = 0; i < 3; i++) {
+        let randomColorValue = Math.floor(Math.random() * 256);
+        rbgValue.push(randomColorValue);
+    };
+
+    newColorValue = rbgValue.join(', ');
+ 
+    return `rgb(${newColorValue})`;
+};
