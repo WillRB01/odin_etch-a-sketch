@@ -24,3 +24,10 @@ function getPlayerInput() {
         alert('Error... try again.');
     };
 };
+
+const setGridBtn = document.querySelector('.set-grid-btn');
+
+setGridBtn.addEventListener('click', () => {
+   container.innerHTML = '';
+   getPlayerInput();
+});
