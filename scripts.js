@@ -25,6 +25,7 @@ function getPlayerInput() {
         createGrid(numOfBoxes);
     } else {
         alert('Error... try again.');
+        return getPlayerInput();
     };
 };
 
