@@ -11,6 +11,16 @@ function createGrid(numOfBoxes) {
             gridRow.appendChild(gridBox);
         };
     };
- };
+};
 
- createGrid(16);
+createGrid(16);
+
+function getPlayerInput() {
+    let numOfBoxes = prompt('How many squares do you want your grid? (The max is 100)');
+    numOfBoxes = parseInt(numOfBoxes);
+    if (numOfBoxes <= 100 && numOfBoxes > 0) {
+        createGrid(numOfBoxes);
+    } else {
+        alert('Error... try again.');
+    };
+};
