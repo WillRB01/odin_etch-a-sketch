@@ -35,6 +35,15 @@ setGridBtn.addEventListener('click', () => {
    getPlayerInput();
 });
 
+const resetGridBtn = document.querySelector('.reset-grid-btn');
+
+resetGridBtn.addEventListener('click', () => {
+   const allGridBoxes = document.querySelectorAll('.grid-box');
+   allGridBoxes.forEach(gridBox => {
+       gridBox.style.backgroundColor = '';
+   });
+});
+
 function boxColorChanger() {
     let rbgValue = [];
     let newColorValue;
